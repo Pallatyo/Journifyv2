@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login — Journify</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-logo">
+            <span>✦</span> Journify
+        </div>
+
+        <p class="login-subtitle">
+            Your little space for stories.
+        </p>
+
+
+        <div class="login-card">
+
+            <div class="login-heading">
+
+                <p class="small-title">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    Login 👋
+                </h1>
+
+                <p>
+                    Masuk untuk melanjutkan jurnalmu.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN USER -->
+
+            <form id="loginForm">
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="loginUsername"
+                    placeholder="Masukkan username"
+                    autocomplete="username"
+                    required
+                >
+
+
+                <label>
+                    Password
+                </label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Masukkan password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        onclick="togglePassword('loginPassword', this)"
+                    >
+                        👁️
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="loginError"
+                    class="login-error"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Masuk
+                </button>
+
+            </form>
+
+
+            <div class="login-divider">
+                <span>atau</span>
+            </div>
+
+
+            <!-- REGISTER -->
+
+            <p class="register-text">
+
+                Belum punya akun?
+
+                <button
+                    type="button"
+                    onclick="showRegister()"
+                    class="link-btn"
+                >
+                    Daftar sekarang
+                </button>
+
+            </p>
+
+
+            <!-- ADMIN -->
+
+            <p class="admin-login-link">
+
+                <button
+                    type="button"
+                    onclick="showAdminLogin()"
+                    class="link-btn"
+                >
+                    ⚙️ Login sebagai Admin
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         REGISTER MODAL
+         ================================================= -->
+
+    <div
+        class="register-modal"
+        id="registerModal"
+    >
+
+        <div class="register-card">
+
+            <button
+                type="button"
+                class="close"
+                onclick="closeRegister()"
+            >
+                ×
+            </button>
+
+
+            <p class="small-title">
+                CREATE ACCOUNT
+            </p>
+
+
+            <h2>
+                Buat akun ✨
+            </h2>
+
+
+            <p class="register-description">
+                Buat akun untuk menyimpan jurnalmu.
+            </p>
+
+
+            <label>
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="registerUsername"
+                placeholder="Contoh: tio"
+                autocomplete="username"
+            >
+
+
+            <label>
+                Password
+            </label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Minimal 4 karakter"
+                    autocomplete="new-password"
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('registerPassword', this)"
+                >
+                    👁️
+                </button>
+
+            </div>
+
+
+            <p
+                id="registerError"
+                class="login-error"
+            ></p>
+
+
+            <button
+                type="button"
+                class="login-btn"
+                onclick="registerAccount()"
+            >
+                Buat Akun
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ADMIN LOGIN MODAL
+         ================================================= -->
+
+    <div
+        class="register-modal"
+        id="adminLoginModal"
+    >
+
+        <div class="register-card">
+
+            <button
+                type="button"
+                class="close"
+                onclick="closeAdminLogin()"
+            >
+                ×
+            </button>
+
+
+            <p class="small-title">
+                ADMIN ACCESS
+            </p>
+
+
+            <h2>
+                Login Admin 🔐
+            </h2>
+
+
+            <p class="register-description">
+                Masuk ke dashboard administrator.
+            </p>
+
+
+            <label>
+                Username Admin
+            </label>
+
+            <input
+                type="text"
+                id="adminUsername"
+                placeholder="Username admin"
+                autocomplete="username"
+            >
+
+
+            <label>
+                Password Admin
+            </label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Password admin"
+                    autocomplete="current-password"
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('adminPassword', this)"
+                >
+                    👁️
+                </button>
+
+            </div>
+
+
+            <p
+                id="adminLoginError"
+                class="login-error"
+            ></p>
+
+
+            <button
+                type="button"
+                class="login-btn"
+                onclick="adminLogin()"
+            >
+                Masuk sebagai Admin
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

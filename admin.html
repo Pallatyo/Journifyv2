@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Journify — Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="admin-page">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✦</span> Journify
+        </div>
+
+        <div class="admin-area">
+
+            <span>
+                🔐 Admin
+            </span>
+
+            <button
+                type="button"
+                class="logout-btn"
+                onclick="adminLogout()"
+            >
+                Keluar
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="admin-main">
+
+        <!-- HEADER -->
+
+        <section class="admin-header">
+
+            <p class="small-title">
+                ADMIN DASHBOARD
+            </p>
+
+            <h1>
+                Selamat datang, Admin 👋
+            </h1>
+
+            <p>
+                Kelola pengguna dan jurnal di Journify.
+            </p>
+
+        </section>
+
+
+        <!-- STATISTIK -->
+
+        <section class="admin-stats">
+
+            <div class="admin-stat-card">
+
+                <span>
+                    👥
+                </span>
+
+                <div>
+
+                    <p>
+                        Total Pengguna
+                    </p>
+
+                    <h2 id="totalUsers">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span>
+                    📖
+                </span>
+
+                <div>
+
+                    <p>
+                        Total Jurnal
+                    </p>
+
+                    <h2 id="totalJournals">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- USERS -->
+
+        <section class="admin-section">
+
+            <div class="admin-section-heading">
+
+                <div>
+
+                    <p class="small-title">
+                        ACCOUNTS
+                    </p>
+
+                    <h2>
+                        Pengguna
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div id="userList">
+            </div>
+
+        </section>
+
+
+        <!-- ALL JOURNALS -->
+
+        <section class="admin-section">
+
+            <div class="admin-section-heading">
+
+                <div>
+
+                    <p class="small-title">
+                        ALL STORIES
+                    </p>
+
+                    <h2>
+                        Semua Jurnal
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div id="adminJournalList">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

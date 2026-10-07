@@ -23,7 +23,17 @@
             <a href="#about">Tentang</a>
         </nav>
 
-        <button class="profile-btn">👤</button>
+        <div class="user-area">
+            <span id="usernameDisplay"></span>
+
+            <button
+                type="button"
+                class="logout-btn"
+                onclick="logout()"
+            >
+                Keluar
+            </button>
+        </div>
 
     </header>
 
@@ -49,7 +59,11 @@
                     ide, dan momen yang ingin kamu ingat.
                 </p>
 
-                <button class="add-btn" onclick="openModal()">
+                <button
+                    type="button"
+                    class="add-btn"
+                    onclick="openModal()"
+                >
                     + Tulis Jurnal
                 </button>
 
@@ -59,8 +73,8 @@
             <div class="hero-card">
 
                 <div class="date-circle">
-                    06
-                    <small>OCT</small>
+                    <span id="todayDay">07</span>
+                    <small id="todayMonth">OCT</small>
                 </div>
 
                 <div>
@@ -96,13 +110,12 @@
                     type="text"
                     id="searchInput"
                     placeholder="Cari jurnal..."
-                    onkeyup="searchJournal()"
                 >
 
             </div>
 
-
             <button
+                type="button"
                 class="filter-btn"
                 onclick="showAll()"
             >
@@ -136,19 +149,14 @@
             </div>
 
 
-            <!--
-                JURNAL AKAN MUNCUL DI SINI
-                DAN AKAN TERSIMPAN DI LOCAL STORAGE
-            -->
-
-            <div id="journalList">
-            </div>
+            <div id="journalList"></div>
 
 
-            <div id="emptyMessage" class="empty">
-
+            <div
+                id="emptyMessage"
+                class="empty"
+            >
                 Tidak ada jurnal yang ditemukan.
-
             </div>
 
         </section>
@@ -166,6 +174,7 @@
         <div class="modal-content">
 
             <button
+                type="button"
                 class="close"
                 onclick="closeModal()"
             >
@@ -222,6 +231,7 @@
 
 
             <button
+                type="button"
                 class="save-btn"
                 onclick="addJournal()"
             >

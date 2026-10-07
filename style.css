@@ -428,3 +428,580 @@ footer {
         height: 45px;
     }
 }
+/* =====================================================
+   JOURNIFY LOGIN
+   ===================================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+}
+
+
+.login-logo {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+.login-logo span {
+    color: #a78bfa;
+}
+
+
+.login-subtitle {
+    margin-bottom: 25px;
+    opacity: 0.65;
+}
+
+
+.login-card,
+.register-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+
+.login-heading {
+    margin-bottom: 25px;
+}
+
+
+.login-heading h1 {
+    margin: 5px 0;
+}
+
+
+.login-heading p:last-child {
+    opacity: 0.65;
+}
+
+
+.login-card label,
+.register-card label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: 600;
+}
+
+
+.login-card input,
+.register-card input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 13px 14px;
+    font: inherit;
+    outline: none;
+}
+
+
+.login-card input:focus,
+.register-card input:focus {
+    border-color: #a78bfa;
+}
+
+
+.password-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.password-box input {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+
+.password-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 17px;
+}
+
+
+.login-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    margin-top: 12px;
+    background: #a78bfa;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.login-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+    opacity: 0.5;
+}
+
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+}
+
+
+.login-divider span {
+    font-size: 13px;
+}
+
+
+.register-text {
+    text-align: center;
+}
+
+
+.link-btn {
+    border: none;
+    background: none;
+    color: #8b5cf6;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.login-error {
+    min-height: 20px;
+    margin: 8px 0;
+    color: #e11d48;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   REGISTER MODAL
+   ===================================================== */
+
+.register-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 9999;
+}
+
+
+.register-modal.show {
+    display: flex;
+}
+
+
+.register-card {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+.register-card h2 {
+    margin-top: 5px;
+}
+
+
+.register-description {
+    opacity: 0.65;
+}
+
+
+.register-card .close {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   USER AREA
+   ===================================================== */
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#usernameDisplay {
+    font-weight: 600;
+}
+
+
+.logout-btn {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px 13px;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.logout-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+/* =====================================================
+   JOURNAL CARD TAMBAHAN
+   ===================================================== */
+
+.journal-card {
+    position: relative;
+}
+
+
+.journal-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.journal-date {
+    font-size: 13px;
+    opacity: 0.55;
+}
+
+
+.delete-btn {
+    border: none;
+    background: transparent;
+    color: #e11d48;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        gap: 12px;
+    }
+
+
+    .navbar nav {
+        display: none;
+    }
+
+
+    .user-area {
+        margin-left: auto;
+    }
+
+
+    #usernameDisplay {
+        max-width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+    .logout-btn {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+
+    .login-card,
+    .register-card {
+        padding: 25px 20px;
+    }
+
+}
+
+/* =====================================================
+   ADMIN DASHBOARD
+   ===================================================== */
+
+.admin-page {
+    min-height: 100vh;
+}
+
+
+.admin-area {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.admin-main {
+    width: min(1100px, 92%);
+    margin: 50px auto;
+}
+
+
+.admin-header {
+    margin-bottom: 35px;
+}
+
+
+.admin-header h1 {
+    margin: 5px 0 10px;
+}
+
+
+.admin-header > p:last-child {
+    opacity: 0.65;
+}
+
+
+/* STATISTICS */
+
+.admin-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+
+.admin-stat-card {
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.admin-stat-card > span {
+    font-size: 30px;
+}
+
+
+.admin-stat-card p {
+    margin: 0 0 4px;
+
+    opacity: 0.6;
+}
+
+
+.admin-stat-card h2 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+
+/* ADMIN SECTION */
+
+.admin-section {
+    margin-bottom: 45px;
+}
+
+
+.admin-section-heading {
+    margin-bottom: 18px;
+}
+
+
+/* USER CARD */
+
+.admin-user-card {
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 18px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.admin-user-name {
+    font-weight: 700;
+}
+
+
+.admin-user-journals {
+    font-size: 13px;
+
+    opacity: 0.55;
+}
+
+
+/* ADMIN JOURNAL */
+
+.admin-journal-card {
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.admin-journal-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.admin-journal-user {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    opacity: 0.65;
+}
+
+
+.admin-journal-card h3 {
+    margin: 8px 0;
+}
+
+
+.admin-journal-card p {
+    line-height: 1.7;
+}
+
+
+.admin-delete-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #e11d48;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    font-size: 13px;
+}
+
+
+.admin-empty {
+    opacity: 0.55;
+
+    padding: 20px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .admin-main {
+        margin: 30px auto;
+    }
+
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-user-card {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+
+    .admin-journal-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
